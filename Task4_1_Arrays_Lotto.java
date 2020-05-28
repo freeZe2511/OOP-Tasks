@@ -22,8 +22,7 @@ public class Task4_1_Arrays_Lotto {
         ausgabeArray(doppelteZahlen);
         System.out.println("Erste doppelte Zahl: " + indexErsteDoppelte(zahlen) + "\n");
         sortArray(zahlen);      // Veranschaulichuung
-
-
+        
     }
 
     public static void initArray(int[] zahlen){
@@ -115,11 +114,5 @@ public class Task4_1_Arrays_Lotto {
             }
         }
         return ersteDoppelte + " ,Index: " + Index2;
-
-
-
-
     }
-
-
 }
