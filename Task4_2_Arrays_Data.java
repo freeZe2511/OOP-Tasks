@@ -8,8 +8,6 @@ public class Task4_2_Arrays_Data {
         System.out.println(findMax(temps));
         System.out.println(findMin(temps));
 
-
-
     }
 
     public static String findMax(double[] temps){
