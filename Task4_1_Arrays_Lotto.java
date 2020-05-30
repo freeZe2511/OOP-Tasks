@@ -101,12 +101,12 @@ public class Task4_1_Arrays_Lotto {
         for (int i = 1; i < 49; i++) {
             if (doppelteZahlen[i] > 1) {
                 counter = 0;
-                for (int index = 0; index < array.length; index++) {
-                    if (zahlen[index] == i) {
+                for (int j = 0; j < array.length; j++) {
+                    if (zahlen[j] == i) {
                         counter += 1;
-                        if (counter == 2 && index < Index2) {
-                            ersteDoppelte = zahlen[index];
-                            Index2 = index + 1;
+                        if (counter == 2 && j < Index2) {
+                            ersteDoppelte = zahlen[j];
+                            Index2 = j + 1;
                             break;
                         }
                     }
