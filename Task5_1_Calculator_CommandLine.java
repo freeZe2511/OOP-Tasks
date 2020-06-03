@@ -20,7 +20,6 @@ public class Task5_1_Calculator_CommandLine {
                 System.out.println(value);
             }
 
-
             // extract "operand1"
             String operand1TextLine = args[0];
             String[] operand1Elements = operand1TextLine.split(":");
@@ -67,7 +66,7 @@ public class Task5_1_Calculator_CommandLine {
             System.out.println(log);
 
 
-            File file = new File("C:\\Users\\Tim\\Desktop\\THM\\1.Semester\\OOP\\Task5_log.txt");
+            File file = new File("C:\\...\\log.txt");
 
             if (!file.exists()) {
                 file.createNewFile();
