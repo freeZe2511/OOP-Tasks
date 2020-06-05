@@ -35,38 +35,15 @@ public class Task5_1_Calculator_CommandLine {
             String[] operatorElements = operatorTextLine.split(":");
             operator = operatorElements[1];
 
-            //calculation
             double op1 = Double.parseDouble(operand1);
             double op2 = Double.parseDouble(operand2);
-            double erg = 0;
 
-            switch (operator) {
-                case "+":
-                    erg = op1 + op2;
-                    break;
-                case "-":
-                    erg = op1 - op2;
-                    break;
-                case "*":
-                    erg = op1 * op2;
-                    break;
-                case "/":
-                    erg = op1 / op2;
-                    break;
-                case "%":
-                    erg = op1 % op2;
-                    break;
-                default:
-                    System.out.println("Fehler!");
-                    break;
-            }
-
-            String erg1 = String.valueOf(erg);
-            String log = operand1 + operator + operand2 + "=" + erg1;
+            String erg1 = String.valueOf(calculate(op1, op2, operator));
+            String log = op1 + operator + op2 + "=" + erg1;
             System.out.println(log);
 
 
-            File file = new File("C:\\...\\log.txt");
+            File file = new File("C:\\Users\\Tim\\Desktop\\THM\\Sem1\\OOP\\Task5_log.txt");
 
             if (!file.exists()) {
                 file.createNewFile();
@@ -76,7 +53,7 @@ public class Task5_1_Calculator_CommandLine {
             FileWriter fw = new FileWriter(file);
             bw = new BufferedWriter(fw);
             bw.write(log);
-            System.out.println("File written Successfully");
+            System.out.println("File written successfully");
 
         }catch (IOException ioe) {
             ioe.printStackTrace();
@@ -93,5 +70,32 @@ public class Task5_1_Calculator_CommandLine {
 
     }
 
-}
+    public static double calculate(double op1, double op2, String operator) {
 
+        double erg = 0;
+        switch (operator) {
+            case "+":
+                erg = op1 + op2;
+                break;
+            case "-":
+                erg = op1 - op2;
+                break;
+            case "*":
+                erg = op1 * op2;
+                break;
+            case "/":
+                erg = op1 / op2;
+                break;
+            case "%":
+                erg = op1 % op2;
+                break;
+            default:
+                System.out.println("Fehler!");
+                break;
+        }
+
+        return erg;
+
+    }
+
+}
