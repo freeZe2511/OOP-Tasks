@@ -43,7 +43,7 @@ public class Task5_1_Calculator_CommandLine {
             System.out.println(log);
 
 
-            File file = new File("C:\\Users\\Tim\\Desktop\\THM\\Sem1\\OOP\\Task5_log.txt");
+            File file = new File("C:\\...\\Task5_log.txt");
 
             if (!file.exists()) {
                 file.createNewFile();
